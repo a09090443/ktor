@@ -9,6 +9,7 @@ object Users : Table() {
     val password = varchar("password", 255)
     override val primaryKey = PrimaryKey(id)
 }
+
 @Serializable
 data class User(
     val id: Int,
