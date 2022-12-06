@@ -22,6 +22,7 @@ fun Route.user(userService: UserService) {
             call.respond(mapOf("users" to users))
         }
         get("test"){
+            userService.findUserByAccount("test1")
             call.respondText("Hello, world!", ContentType.Text.Plain, HttpStatusCode.OK)
         }
     }
