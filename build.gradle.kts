@@ -13,10 +13,10 @@ plugins {
     id("io.ktor.plugin") version "2.1.3"
 }
 
-group = "com.example"
+group = "com.zipe"
 version = "0.0.1"
 application {
-    mainClass.set("com.example.ApplicationKt")
+    mainClass.set("MainKt")
 
     val isDevelopment: Boolean = project.ext.has("development")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
@@ -32,6 +32,8 @@ dependencies {
     implementation("io.ktor:ktor-serialization:$ktor_version")
     implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor_version")
     implementation("ch.qos.logback:logback-classic:$logback_version")
+    implementation("io.ktor:ktor-server-content-negotiation:$ktor_version")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor_version")
 
     implementation("com.zaxxer:HikariCP:$hikariCpVersion")
     implementation("org.jetbrains.exposed:exposed-core:$exposedVersion")

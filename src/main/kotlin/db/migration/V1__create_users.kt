@@ -1,4 +1,4 @@
-package com.zipe.db.migration
+package db.migration
 
 import com.zipe.model.*
 import org.flywaydb.core.api.migration.BaseJavaMigration
